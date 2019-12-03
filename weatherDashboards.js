@@ -1,6 +1,11 @@
 // This is our API key
 var APIKey = "6912191e5e234892da8634646e776c9d"; //remove later
 
+
+$( document ).ready(function() {
+  getCityWeather("los angeles");
+});
+
 function getCityWeather(searchCity) {
    
    
@@ -144,7 +149,7 @@ function loadCities(){
     document.location.reload();
   }
 
-  function addToList(c){
+  function addToList(c){  
     var lEl= $("<li><a href='#' onclick=\"return getCityWeather('" + c + "');\" target='_blank'>"+c.charAt(0).toUpperCase() + c.slice(1)+"</a></li>");   
     $(lEl).attr("class","list-group-item");
     $(lEl).attr("data-value",c.toUpperCase());
