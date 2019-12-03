@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard v1.0</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script
+        src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Array.from,Array.assign,fetch&flags=always,gated"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,400italic,500italic' rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron ml-2 mr-2 bg-dark text-center text-light p-2">
+            <h1> Weather Dashboard</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 bg-light ml-4">
+                <h4 class="pt-1">Search for a City:</h4>
+                <div class="input-group mb-3 w-75">
+                    <input type="text" class="form-control" id="search-city" aria-label="City Search"
+                        aria-describedby="search-button">
+                    <div class="input-group-append ">
+                        <button class="btn bg-primary text-light" id="searchbutton" onclick="return getCityWeather(document.getElementById('search-city').value)"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <button class='list-group-item bg-warning btn-sm' id='delete'><i class='fas fa-trash-alt'></i> Clear
+                    History</button>
+                <ul class="list-group mb-5">
+
+                </ul>
+            </div>
+            <div class="col-sm-7 ml-2">
+                <div class="col-sm-12 info mb-4 p-3" id="weather-current">
+                    <div class="row">
+                        <div class="col h3">
+                            <span id="currentCity"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            Temperature: <span id="temprature"></span> &#8457;
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            Humidity: <span id="humidity"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            Wind Speed: <span id="windspeed"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            UV Index: <span id="uvindex"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12" id="weather-future">
+                    <h3>5-Day Forecast</h3>
+                    <div class="row text-light" id="5DayForcast">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="weatherDashboards.js"></script>
+</body>
+
+</html>
