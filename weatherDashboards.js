@@ -3,7 +3,7 @@ var APIKey = "6912191e5e234892da8634646e776c9d"; //remove later
 
 function getCityWeather(searchCity) {
    
-   window.alert(searchCity);
+   
     if (searchCity==""){    
         window.alert("Please specify city in search box");
         return;
@@ -29,7 +29,7 @@ function getCityWeather(searchCity) {
         .then(function (response) {
 
             // // Log the queryURL
-           console.log(queryURL);
+          // console.log(queryURL);
 
             // // Log the resulting object
           // console.log(response);
