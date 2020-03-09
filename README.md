@@ -10,3 +10,6 @@ Search:-
 
 Api used for Weather forcasting :-
 api.openweathermap.org
+
+#Live application:
+[Weather Dashboard](https://neharichi.github.io/weather-dashboard/) 
